@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ResumeAI</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <nav class="navbar">
+        <a class="logo" href="{{ url_for('index') }}">ResumeAI</a>
+        <div class="nav-links">
+            <a href="{{ url_for('home')}}">Home</a>
+            <a href="{{url_for('about')}}">About</a>
+            <a href="{{ url_for('service')}}">How It Works</a>
+        </div>
+    </nav>
+</head>
+
+<body>
+
+    <section class="container">
+
+        <h2 id="head1"> Resume Screening System </h2>
+
+        <div class="buttons">
+            <button id="textButton" onclick="showTextForm()">Enter the Text</button>
+            <button id="fileButton" onclick="showFileForm()">Upload File</button>
+        </div>
+
+        <div id="textForm" style="display:none">
+            <form action="/text_predict" method="POST">
+                <textarea name="resume_text" rows="10" cols="60" placeholder="Paste your resume here" required></textarea>
+                <br></br>
+                <button type="submit" class="predict-btn">Predict Role</button>
+            </form>
+        </div>
+
+        <div id="fileForm" style="display:none">
+            <form action="/file_predict" method="POST" enctype="multipart/form-data">
+                <input type="file" name="resume_file" accept=".pdf" required>
+                <br></br>
+                <button type="submit" class="predict-btn">Predict role</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+<script>
+    function showTextForm() {
+        document.getElementById("textForm").style.display="block";
+        document.getElementById("fileForm").style.display="none";
+    }
+
+    function showFileForm() {
+        document.getElementById("fileForm").style.display="block";
+        document.getElementById("textForm").style.display="none";
+    }
+</script>
+</html>

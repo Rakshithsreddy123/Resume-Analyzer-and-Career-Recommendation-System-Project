@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ResumeAI</title>
+
+        <nav class="navbar">
+        <a class="logo" href="{{ url_for('home') }}">ResumeAI</a>
+        <div class="nav-links">
+            <a href="{{ url_for('home')}}">Home</a>
+            <a href="{{url_for('about')}}">About</a>
+            <a href="{{ url_for('service')}}">How It Works</a>
+        </div>
+        </nav>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/service.css') }}">    
+    </head>
+
+    <body>
+        <section class="how-section">
+            <div class="how-container">
+
+                <h1>How ResumeAI Works</h1>
+                <p class="how-intro">
+                    Our system uses Natural Language Processing and Machine Learning 
+                    to analyze resumes and predict the most suitable job role.
+                </p>
+
+                <div class="steps">
+
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Upload Resume</h3>
+                        <p>
+                            Users upload their resume in PDF or text format through 
+                            the web interface.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Text Extraction</h3>
+                        <p>
+                            The system extracts raw text from the resume and cleans 
+                            unnecessary symbols, formatting, and stop words.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Feature Processing</h3>
+                        <p>
+                            The cleaned text is converted into numerical format using 
+                            TF-IDF vectorization for machine learning processing.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>ML Prediction</h3>
+                        <p>
+                            The trained model (Logistic Regression / Random Forest) 
+                            predicts the most suitable job category.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <h3>Result Display</h3>
+                        <p>
+                            The predicted job role is displayed instantly to the user 
+                            through a clean results page.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>

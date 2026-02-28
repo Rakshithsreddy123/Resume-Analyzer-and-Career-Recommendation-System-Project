@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ResumeAI</title>
+
+        <nav class="navbar">
+        <a class="logo" href="{{ url_for('home') }}">ResumeAI</a>
+        <div class="nav-links">
+            <a href="{{ url_for('home')}}">Home</a>
+            <a href="{{url_for('about')}}">About</a>
+            <a href="{{ url_for('service')}}">How It Works</a>
+        </div>
+        </nav>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">    
+    </head>
+
+    <body>
+        <section class="about-section">
+            <div class="about-container">
+
+                <h1>About ResumeAI</h1>
+
+                    <p class="about-intro">
+                        ResumeAI is an AI-powered web application designed to analyze resumes 
+                        and predict the most suitable job role based on skills and experience.
+                        The system uses Machine Learning algorithms to classify resumes into 
+                        various job categories with high accuracy.
+                    </p>
+
+                <div class="about-grid">
+
+                    <div class="about-card">
+                        <h3>🚀 Project Objective</h3>
+                            <p>
+                                The goal of ResumeAI is to help students and professionals 
+                                understand which job role best matches their skillset. 
+                                It simplifies career guidance using AI-driven predictions.
+                            </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>🧠 How It Works</h3>
+                            <p>
+                                The system extracts text from uploaded resumes, processes it 
+                                using TF-IDF vectorization, and feeds it into a trained 
+                                machine learning model such as Logistic Regression to predict the job category.
+                            </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>⚙️ Technologies Used</h3>
+                        <p>
+                            • Python & Flask (Backend) <br>
+                            • HTML, CSS (Frontend) <br>
+                            • Scikit-learn (Machine Learning) <br>
+                            • NLP Techniques for text processing
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>🎯 Key Features</h3>
+                        <p>
+                            • Instant Resume Classification <br>
+                            • Clean & Simple UI <br>
+                            • Fast Predictions <br>
+                            • Accurate ML Model
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>
